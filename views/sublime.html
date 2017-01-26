@@ -39,41 +39,37 @@
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
+    <div class="checkbox">
     <label>
-      <input type="checkbox"> Check me out
-    </label>
+      <input type="checkbox"> Become a Member
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+    <div class="checkbox">
+    <label>
+      <input type="checkbox"> Just get emails
+    </label>
+    <p class="Enter"> Enter your dog's name, and let's get Barkin'! </p>
+  </div>
+  <button type="button" id='name' onclick="setName()">name</button>
+  </form>
+  </div>
+   <button type="submit" class="btn btn-default">Submit</button>
 </form>
 
+<script>
+  var name;
+ if (localStorage.getItem('name') === null) { //run this if nothing is stored in the local storage
+    name = 'click to name'
+} else {
+    name = localStorage.getItem('name')
+}
+  
+  function setName(){ 
+    document.getElementById("name").innerHTML = prompt('name');
+    localStorage.setItem('name', name);
+  }
+</script>
 
-    <script src="http://sabioapi2.azurewebsites.net/scripts/sabio.js"></script>
-    <!-- All your code goes below here-->
-    <script type="text/javascript">
-=======
-	<script src="http://sabioapi2.azurewebsites.net/scripts/sabio.js"></script>
-	<!-- All your code goes below here-->
-	<script type="text/javascript">
 
->>>>>>> 9854928997c9bd3730aea2a4e1065a7e0fe64b60
-
-    
-
-
-
-    </script>
 
 </body>
 </html>
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 9854928997c9bd3730aea2a4e1065a7e0fe64b60
